@@ -32,24 +32,13 @@
                             <th>#</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Cell</th>
+                            
                             <th>Photo</th>
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody class="">
-                        <tr>
-                            <td>1</td>
-                            <td>Shamim</td>
-                            <td colspan="1">shamim@gmail.com</td>
-                            <td>+95959554</td>
-                            <td> <img src="#" alt=""> </td>
-                            <td>
-                                <a class="btn btn-info btn-sm" data-bs-toggle ="modal" href="#dev_modal_view"><i class="fa fa-eye"></i> </a>
-                                <a class="btn btn-warning btn-sm" data-bs-toggle ="modal" href="#dev_modal_edit"><i class="fa fa-edit"></i> </a>
-                                <a class="btn btn-danger btn-sm"  data-bs-toggle ="modal"href="#dev_modal_delete"><i class="fa fa-trash"></i> </a>
-                            </td>
-                        </tr>
+                    <tbody class="devs_Alldata">
+                        
                     </tbody>
                 </table>
 
@@ -67,7 +56,7 @@
                     <h3>Add new developer</h3>
                 </div>
                 <div class="modal-body">
-                    <form action="">
+                    <form id="add_devs">
                         <div class="mb-3">
                             <label for="name">Name</label>
                             <input id="name" type="text" class="form-control">
@@ -84,19 +73,18 @@
                         </div>
 
                         <div class="mb-3">
-                            <select class="form-control" name="" id="">
+                            <label for="Skill">Skill</label>
+                            <select class="form-control" name="" id="skill_list">
                                 <option value="">--Select--</option>
                             </select>
                             </div>
                             <div class="mb-3">
-                                <input class="btn btn-primary w-100" type="submit" value="Add" >
+                                <input id="add_btn" data-bs-dismiss="modal" class="btn btn-primary w-100" type="submit" value="Add" >
                             </div>
                         
                     </form>
 
-                </div>
-                <div class="modal-footer"></div>
-                
+                </div>              
             </div>
         </div>
     </div>
@@ -119,10 +107,45 @@
     <div class="modal fade" id="dev_modal_edit">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header"></div>
+                <h2 class="text-center">Edit Developer Data</h2>
                 <div class="modal-body">
+                     <form id="edit_devs">
+                         <div class="mb-3">
+                             <img style="object-fit: cover; width: 100px; height: 100px; display: block; margin: auto;" id="preview" src="" alt="">
+                         </div>
+                         <div class="mb-3">
+                             <label for="name">Name</label>
+                             <input id="ename" type="text" class="form-control">
+                         </div>
+
+                          <div class="mb-3">
+                             
+                              <input id="edit_id" type="hidden" class="form-control">
+                          </div>
+
+                         <div class="mb-3">
+                             <label for="email">Email</label>
+                             <input id="eemail" type="email" class="form-control">
+                         </div>
+
+                         <div class="mb-3">
+                             <label for="Photo">Photo</label>
+                             <input id="ephoto" type="text" class="form-control">
+                         </div>
+
+                         <div class="mb-3">
+                             <label for="Skill">Skill</label>
+                             <input class="form-control" name="" id="eskill_list">
+                                
+                         </div>
+                         <div class="mb-3">
+                             <input id="edit_btn" data-bs-dismiss="modal" class="btn btn-primary w-100" type="submit"
+                                 value="Edit">
+                         </div>
+
+                     </form>
                 </div>
-                <div class="modal-footer"></div>
+                
 
             </div>
         </div>
@@ -155,8 +178,9 @@
 
 
     
-
-
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
