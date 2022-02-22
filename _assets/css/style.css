@@ -6,3 +6,16 @@ body{
     margin: 100px auto;
     width: 50%;
 }
+button#clsBtn {
+
+    float: right !important;
+    margin: 0 auto;
+    position: absolute;
+    right: 18px;
+    font-size: 13px;
+    top: 10px;
+    border: 1px solid firebrick;
+}
+
+    
+  
